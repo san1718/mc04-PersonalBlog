@@ -1,0 +1,153 @@
+/* Defining universal color variables for light and dark modes */
+:root {
+    /* Light mode styles */
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-footer-bg: lightgray;
+    --header-footer-text: #fff;
+    --button-bg: green;
+    --button-text: #fff;
+    --button-hover-bg: darkgreen;
+}
+
+body.dark-mode {
+    /* Dark mode styles */
+    --background-color: #333;
+    --text-color: #fff;    
+    --header-footer-bg: #222;  
+    --header-footer-text: #fff;
+    --button-bg: #666;         
+    --button-text: #fff;     
+    --button-hover-bg: #444;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header .btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header .btn:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Main Styles */
+main {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    bottom: 0;
+}
+
+/* Footer */
+.footer a {
+    color: var(--header-footer-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Hover */
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles */
+.btn,
+a.btn {
+    padding: 10px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.btn:hover,
+a.btn:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .btn {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
